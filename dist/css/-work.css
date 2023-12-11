@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700;800&display=swap");
+.color {
+  color: hsl(0, 100%, 70%);
+}
+
+@media (min-width: 50em) {
+  .main__blog {
+    margin: 2em 8rem 2rem 8rem;
+  }
+}
+@media (max-width: 50em) {
+  .main__blog {
+    padding: 1rem;
+  }
+}
+.main__blog h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: hsl(234, 30%, 18%);
+  margin-block: 1rem;
+}
+.main__blog .blog__content {
+  border-bottom: 1px solid hsl(0, 0%, 88%);
+}
+.main__blog .blog__content h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: hsl(234, 30%, 18%);
+  padding-block: 1rem;
+}
+.main__blog .blog__content p {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(234, 30%, 18%);
+  padding-bottom: 0.5rem;
+}
+.main__blog .blog__content .flex-3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.main__blog .blog__content .flex-3 h4 {
+  font-size: 20px;
+  color: hsl(234, 30%, 18%);
+}
+.main__blog .blog__content .flex-3 h5 {
+  font-size: 20px;
+  color: hsla(234, 30%, 18%, 0.3);
+  font-weight: 400;
+}
+.main__blog .blog__content .flex-3 span {
+  color: hsl(234, 30%, 18%);
+}
+
+@media (max-width: 50em) {
+  .visually-hidden {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}
+
+@media (min-width: 50em) {
+  .visually-hidden__ls {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}/*# sourceMappingURL=-work.css.map */

@@ -1,0 +1,91 @@
+@import '-config';
+
+
+.color{
+    color: $button-bg-clr;
+  }
+  
+  .main__blog{
+    @include mobile-ls{
+      margin: 2em 8rem 2rem 8rem;
+    }
+    @include mobile{
+      padding: 1rem;
+    }
+   
+    h2{
+      font-size: $fz-200;
+      font-weight: weight(bold);
+      color: $primary-clr-300;
+      margin-block: 1rem;
+    }
+    .blog__content{
+      border-bottom: 1px solid $border-clr;
+      h3{
+        font-size: $fz-150;
+        font-weight: weight(medium);
+        color: $primary-clr-300;
+        padding-block: 1rem;
+       
+      }
+      p{
+        font-size: $fz-90;
+        font-weight: weight(regular);
+        color: $primary-clr-300;
+        padding-bottom: 0.5rem;
+      }
+      .flex-3{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+       
+        h4{
+          font-size: $fz-100;
+          color: $primary-clr-300;
+        }
+  
+        h5{
+          font-size: $fz-100;
+          color: hsla(234, 30%, 18%, 0.3);
+          font-weight: weight(regular);
+        }
+        span{
+          color: $primary-clr-300;
+        }
+      }
+    }
+  }
+  
+  // work
+  
+  .visually-hidden {
+    @include mobile{
+    position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  }
+  }
+  
+  .visually-hidden__ls{
+    @include mobile-ls{
+      position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  
+    }
+    }

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700;800&display=swap');
+
+$primary-clr-100: hsla(0, 0%, 0%, 1);
+$button-bg-clr: hsla(0, 100%, 70%, 1);
+$button-text-clr: hsla(0, 0%, 100%, 1);
+
+$primary-clr-200: hsla(194, 57%, 95%, 1);
+$primary-clr-300: hsla(234, 30%, 18%, 1);
+$neutral-clr-100: hsla(191, 100%, 40%, 1);
+$border-clr: hsla(0, 0%, 88%, 1);
+$heading: hsla(210, 14%, 58%, 1);
+
+
+$fz-90: 16px;
+$fz-85: 20px;
+$fz-80: 18px;
+$fz-95: 26px;
+$fz-100: 20px;
+$fz-150: 30px;
+$fz-190: 34px;
+$fz-200: 44px;
+
+
+$font-weight: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function weight($weight-name){
+    @return map-get($font-weight , $weight-name );
+}
+
+
+@mixin grid{
+    display: grid;
+        grid-template-columns:  repeat(1fr, 2);
+        grid-template-rows: 1fr;
+}
+
+$mobile: 50em;
+$mobile-ls: 50em;
+
+@mixin mobile{
+    @media (max-width: $mobile){
+        @content;
+    }
+}
+
+@mixin mobile-ls{
+    @media (min-width: $mobile-ls){
+        @content;
+    }
+}

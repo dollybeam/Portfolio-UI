@@ -1,0 +1,67 @@
+@import '-config';
+
+.work__detail{
+    
+    @include mobile{
+      padding: 5rem 2rem;
+    }
+    @include mobile-ls{
+      margin: 5rem 10rem 2rem 20rem;
+    }
+    img{
+      aspect-ratio: 1 / 1;
+    }
+
+    h2{
+      color: $primary-clr-300;
+      font-size: $fz-190;
+      font-weight: weight(bold);
+      max-width: 25ch;
+      padding-bottom: 1rem;
+
+      @include mobile{
+        max-width: 20ch;
+      }
+    }
+    .flex-4{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      .tag{
+        width: 60px;
+        height: 40px;
+        background-color: $button-bg-clr;
+        color: $button-text-clr;
+        font-size: $fz-80;
+        border-radius: 4rem;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      h3{
+        font-size: $fz-100;
+        color: $primary-clr-300;
+        font-weight: weight(regular);
+      }
+    }
+    p{
+      font-size: $fz-90;
+      max-width: 70ch;
+      padding-bottom: 1rem;
+    }
+    h3{
+      font-size: $fz-150;
+      font-weight: weight(medium);
+      color: $primary-clr-300;
+      padding-block: 1rem;
+    }
+    h4{
+      font-size: $fz-100;
+      color: $primary-clr-300;
+      font-weight: weight(medium);
+    }
+    img{
+      padding-block: 1rem 2rem;
+    }
+  }

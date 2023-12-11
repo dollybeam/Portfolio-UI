@@ -1,0 +1,324 @@
+@import '-config';
+@import '-blog';
+@import '_work-detail';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    font-family: Heebo;
+    color: $primary-clr-100;
+}
+
+a{
+    text-decoration: none;
+    color: $primary-clr-100;
+}
+
+
+// header
+.header__nav{
+  font-size: $fz-100;
+  font-weight: weight(medium);
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  padding: 1rem 2rem 1rem;
+
+  .menu{
+    @include mobile-ls{
+      display: none;
+    }
+  }
+
+  a{
+    @include mobile{
+      display: none;
+    }
+  }
+}
+
+.header{ 
+
+    .header__items{
+      @include mobile-ls{
+        margin: 8rem;
+      }
+      
+        @include grid;
+        @include mobile{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+      }
+        
+        .header__items-img{
+            grid-column: 2 / 3;
+            @include mobile-ls{
+              margin-left: 400px;
+            }
+        }
+
+        .header__items-content{
+
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+           @include mobile{
+            text-align: center;
+           }
+            h2{
+                max-width: 25ch;
+                font-size: $fz-200;
+                font-weight: weight(bold);
+                padding: 0.5rem;
+            }
+            p{
+                font-size: $fz-90;
+                font-weight: weight(regular);
+                max-width: 55ch;
+                padding-block: 1rem 2rem;
+
+                @include mobile{
+                  font-size: $fz-90;
+                  font-weight: weight(medium);
+                  max-width: 40ch;
+                  
+                }
+            }
+            button{
+                background-color: $button-bg-clr;
+                color: $button-text-clr;
+                font-size: $fz-100;
+                font-weight: weight(medium);
+                border: 0;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+            }
+        }
+        
+}
+}
+
+.posts{
+  @include mobile {
+    padding: 1rem;
+  }
+ 
+  @include mobile-ls{
+  padding: 1.5rem 8rem 1.5rem 8rem;
+}
+ 
+    background-color: $primary-clr-200;
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      
+    }
+  .post__items{
+    
+      display: flex;
+      justify-content: space-between;
+      @include mobile{
+        justify-content: center;
+      }
+    h3{
+      font-size: $fz-85;
+      font-weight: weight(regular);
+      color: $primary-clr-300;
+    }
+
+    a{
+      margin-right: 3rem;
+      color: $neutral-clr-100;
+      font-size: $fz-90;
+      font-family: weight(regular);
+     
+    }
+
+     }
+  .post__comments{
+    display: flex;
+    gap: 2rem;
+   @include mobile{
+    flex-direction: column;
+   }
+    p{
+      font-size: $fz-90;
+      color: hsla(234, 30%, 18%, 0.6);
+      font-weight: weight(regular);
+    }
+
+    h2{
+      color: $primary-clr-300;
+      font-size: $fz-95;
+      font-weight: weight(bold);
+    }
+    h4{
+      font-size: $fz-80;
+      color: hsla(234, 30%, 18%, 0.6);
+      font-weight: weight(regular);
+      padding-block: 0.5rem;
+
+      span{
+        margin-inline: 0.5rem;
+      }
+    }
+  }
+  .post__comments-1{
+    padding: 1rem;
+    background-color: $button-text-clr;
+    max-width: 420px;
+    box-shadow: -2px -2px 2px rgb(71, 70, 70,0.3);
+  }
+
+  .post__comments-2{
+    padding: 1rem;
+    background-color: $button-text-clr;
+    max-width: 420px;
+    box-shadow: -1px -1px 1px rgb(71, 70, 70,0.3);
+  }
+}
+
+
+.features{
+  @include mobile-ls{
+    margin: 1.5rem 8rem 1.5rem 8rem;
+  }
+  @include mobile{
+    padding: 1rem;
+  }
+  .flex{
+    display: flex;
+    gap: 2rem;
+    @include mobile{
+      align-items: center;
+      flex-direction: column;
+    }
+    padding-block: 1rem;
+    border-bottom: 1px solid $border-clr;
+    margin-block: 1rem;
+
+    h2{
+      color: $primary-clr-300;
+      font-weight: weight(bold);
+      font-size: $fz-150;
+    }
+     .h3{
+      background-color: $primary-clr-300;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 30px;
+      border-radius: 2em;
+      color: hsl(0, 0%, 100%);
+      font-size: $fz-80;
+      font-weight: 900;
+     }
+     .flex-2{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-block: 0.5rem;
+
+      h5{
+        font-size: $fz-85;
+        font-weight: weight(regular);
+        color: $heading;
+      }
+     }
+     p{
+      font-size: $fz-90;
+      font-weight: weight(regular);
+      color: $primary-clr-300
+     }
+  }
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 1rem;
+  .footer__social-icons{
+    display: flex;
+    gap: 1rem;
+  }
+  .footer__items{
+    padding-block: 1rem;
+    color: $primary-clr-300;
+    font-size: 14px;
+    font-family: weight(regular);
+  }
+}
+
+
+ 
